@@ -1,0 +1,17 @@
+mixin card(data)
+
+  each value in data
+    -let iconSrc = (value["uprise"]) ? "./assets/images/icon-up.svg" : "./assets/images/icon-down.svg" 
+    -let dynamicsClass = (value["uprise"]) ? `card__dynamics_green` : `card__dynamics_red`
+    .card
+      div(class=`card__border_${value["color"]}`)
+      .card__content
+        .card__header
+          img.card__icon(src= value["icon"] alt= value["icon"])
+          .card__nickname= value["nickname"]
+        .card__main 
+          p.card__count= value["countOverall"] 
+          p.card__members= value["members"]
+        .card__footer 
+          img(src= iconSrc, alt= iconSrc)
+          p.card__dynamics(class= dynamicsClass)= `${value["countperDay"]} Today`

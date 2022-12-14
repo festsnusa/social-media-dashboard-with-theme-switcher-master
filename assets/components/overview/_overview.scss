@@ -1,0 +1,75 @@
+.overview {
+
+  &__heading {
+    color: $white;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    &_light {
+      color: $textLight;
+    }
+  }
+
+  &__item {
+    background-color: $cardDark;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hoverDark;
+    }
+
+    &_light {
+      background-color: $cardLight;
+
+      &:hover {
+        background-color: #E1E3EF;
+      }
+    }
+
+    
+  }
+
+  &__header, &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $textDark;
+    font-weight: 700;
+  }
+
+  &__count {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    &_light {
+      color: $textLightDark;
+    }
+  }
+  
+  &__percents {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  &__dynamics {
+
+    font-weight: 700;
+
+    &_green {
+      color: $lime;
+    }
+
+    &_red {
+      color: $red;
+    }
+  }
+
+}

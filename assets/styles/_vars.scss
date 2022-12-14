@@ -1,0 +1,24 @@
+$lime: hsl(163, 72%, 41%);
+$red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(108deg, rgba(251,195,113,1) 0%, rgba(219,71,149,1) 10%);
+$youtube: hsl(348, 97%, 39%);
+$toggleDark: linear-gradient(108deg, hsl(210, 78%, 56%) 50%, hsl(146, 68%, 55%) 90%);
+$toggleLight: hsl(230, 22%, 74%);
+
+/* dark theme */
+$backgroundDark: #1E1E1E;
+$backgroundDarkPattern: #20222E;
+$cardDark: #252B42;
+$textDark: hsl(228, 34%, 66%);
+$white: hsl(0, 0%, 100%);
+$hoverDark: #333A55;
+
+/* light theme */
+$backgroundLightPattern: hsl(225, 100%, 98%);
+$cardLight: hsl(227, 47%, 96%);
+$textLight: hsl(228, 12%, 44%);
+$textLightDark: hsl(230, 17%, 14%);
+
+$fontSize: 0.875rem;

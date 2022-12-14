@@ -1,0 +1,56 @@
+.toggle {
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__title {
+    color: $textDark;
+
+    &_light {
+      color: $textLight;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    position: relative;
+    appearance: none;
+    margin-top: 0.15rem;
+    background: $toggleDark;
+    height: 1.25rem;
+    width: 2.5rem;
+    cursor: pointer;
+    border: 1px solid $toggleLight;
+    border-radius: 20px;
+
+    &:checked {
+      background: $toggleLight;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0.85rem;
+      height: 0.85rem;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      background: $backgroundDarkPattern;
+      transition: .25s;
+    }
+
+    &:checked:before {
+      left: 22px;
+      background: $white;
+    }
+  }
+
+}

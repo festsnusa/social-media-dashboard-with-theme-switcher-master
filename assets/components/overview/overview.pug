@@ -1,0 +1,16 @@
+mixin overview(data)
+  .overview
+    h1.overview__heading Overview - Today
+    .overview__items.grid
+      each value in data 
+        -let iconSrc = (value["uprise"]) ? "./assets/images/icon-up.svg" : "./assets/images/icon-down.svg" 
+        -let dynamicsClass = (value["uprise"]) ? `overview__dynamics_green` : `overview__dynamics_red`
+        .overview__item
+          .overview__header
+            p.overview__title= value["title"]
+            img(src= value["icon"], alt= value["icon"])
+          .overview__footer
+            p.overview__count= value["count"]
+            .overview__percents 
+              img(src= iconSrc, alt= iconSrc)
+              p.overview__dynamics(class= dynamicsClass)= `${value["percents"]}%`

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './vars';
+@import '../components/toggle/toggle';
+@import '../components/card/card';
+@import '../components/overview/overview';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $backgroundDarkPattern;
+}
+
+.hr {
+  border-top: 1px $textDark;
+
+  &_light {
+    border-color: $textLight;
+  }
+}
+
+.component {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: $backgroundDarkPattern;
+
+  &_light {
+    background-color: $white;
+  }
+
+  &__main {
+    margin-bottom: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 440px);
+  justify-content: center;
+  gap: 35px;
+}
+
+.header {
+
+  font-weight: 700;
+
+  &__title_light {
+    color: $textLightDark;
+  }
+
+  &__subtitle {
+    
+    color: $textDark;
+
+    &_light {
+      color: $textLight;
+    }
+  }
+
+  &__box {
+    margin-bottom: 2rem;
+  }
+
+  &__toggle {
+    padding: 2rem 0 3rem;
+  }
+}
+
+@media (min-width: 1150px) {
+
+  .hr {
+    display: none;
+  }
+
+  .component {
+    padding: 3.5rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 440px);
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .grid {
+    grid-template-columns: repeat(4, 300px);
+  }
+}

@@ -1,0 +1,47 @@
+include ./assets/components/toggle/toggle
+include ./assets/components/card/card
+include ./assets/components/overview/overview
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Social Media Dashboard with Theme Switcher
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+    link(rel="stylesheet", href="./assets/styles/styles.css")
+  body 
+    .component 
+      -let facebook= "./assets/images/icon-facebook.svg"
+      -let twitter= "./assets/images/icon-twitter.svg"
+      -let instagram= "./assets/images/icon-instagram.svg"
+      -let youtube= "./assets/images/icon-youtube.svg"
+      header.component__header
+        .header
+          .header__box
+            h1.header__title Social Media Dashboard
+            p.header__subtitle Total Followers: 23,004
+          hr.hr
+          .header__toggle
+            +toggle
+      
+      main.component__main.grid
+        +card([ 
+          {"icon": facebook, "nickname": "@nathanf", "color": "facebook", "countOverall": "1987", "members": "followers", "countperDay": "12", "uprise": true},
+          {"icon": twitter, "nickname": "@nathanf", "color": "twitter", "countOverall": "1044", "members": "followers", "countperDay": "99", "uprise": true},
+          {"icon": instagram, "nickname": "@realnathanf", "color": "instagram", "countOverall": "11k", "members": "followers", "countperDay": "1099", "uprise": true},
+          {"icon": youtube, "nickname": "Nathan F.", "color": "youtube", "countOverall": "8239", "members": "subscribers", "countperDay": "144", "uprise": false}
+        ])
+      footer.component__footer
+        +overview([
+          {"title": "Page Views", "icon": facebook, "count": "87", "percents": "3", "uprise": true},
+          {"title": "Likes", "icon": facebook, "count": "52", "percents": "2", "uprise": false},
+          {"title": "Likes", "icon": instagram, "count": "5462", "percents": "2257", "uprise": true},
+          {"title": "Profile Views", "icon": instagram, "count": "52k", "percents": "1375", "uprise": true},
+          {"title": "Retweets", "icon": twitter, "count": "117", "percents": "303", "uprise": true},
+          {"title": "Likes", "icon": twitter, "count": "507", "percents": "553", "uprise": true},
+          {"title": "Likes", "icon": youtube, "count": "107", "percents": "19", "uprise": false},
+          {"title": "Total Views", "icon": youtube, "count": "1407", "percents": "12", "uprise": false} 
+        ])
+    script(src="./app.js")
